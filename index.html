@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wybór dystrybucji Linuxa</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/6dbf723976.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="text-align: center;" id="pytaniabox" class="pytaniabox">
+        <h1>Witaj!</h1>
+        <h2>Ten test pomoże Ci wybrać dystrybucję linuxa idealną dla ciebie <i class="fab fa-linux"></i></h2>
+        <h3>Test się składa z 20 pytań</h3><br>
+        <div class = "pytanko">
+            <h3>Jak oceniasz swój poziom zaawansowania przy komputerach?</h3>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="malozaawansowany">
+                <label class="form-check-label" for="malozaawansowany">Małozaawansowany</label><br>
+                <input type="checkbox" class="form-check-input" id="sredniozaawansowany">
+                <label class="form-check-label" for="sredniozaawansowany">Średniozaawansowany</label><br>
+                <input type="checkbox" class="form-check-input" id="zaawansowany">
+                <label class="form-check-label" for="zaawansowany">Zaawansowany</label><br>
+              </div>
+              <button type = "button" class = "btn btn-primary" onclick = "zmierzPytanie(1)" id = "pytanie1"><i class="fas fa-check"></i> OK</button>
+        </div><br>
+        <div class = "pytanko">
+            <h3>Do czego wykorzystujesz swój komputer?</h3>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="internetu"><script src="https://kit.fontawesome.com/6dbf723976.js" crossorigin="anonymous"></script>
+                <label class="form-check-label" for="internetu"><i class="fab fa-internet-explorer"></i> Przeglądanie internetu</label><br>
+                <input type="checkbox" class="form-check-input" id="praca">
+                <label class="form-check-label" for="praca"><i class="fas fa-mail-bulk"></i> Praca w pakiecie biurowym</label><br>
+                <input type="checkbox" class="form-check-input" id="granie">
+                <label class="form-check-label" for="granie"><i class="fas fa-gamepad"></i> Granie w gry</label><br>
+                <input type="checkbox" class="form-check-input" id="programowanie">
+                <label class="form-check-label" for="programowanie"><i class="fas fa-code"></i> Programowanie</label><br>
+                <input type="checkbox" class="form-check-input" id="kreatywnosc">
+                <label class="form-check-label" for="kreatywnosc"><i class="fas fa-paint-brush"></i> Edytowanie filmów, obróbka zdjęć, nagrywanie dźwięku, itp.</label><br>
+                <input type="checkbox" class="form-check-input" id="szkola">
+                <label class="form-check-label" for="szkola"><i class="fas fa-school"></i> Potrzebuję dystrybucji do szkoły</label><br>
+              </div>
+              <button type = "button" class = "btn btn-primary" onclick = "zmierzPytanie(2)" id = "pytanie2"><i class="fas fa-check"></i> OK</button>
+        </div><br>
+        <div class = "pytanko">
+            <h3>Ile lat ma twój komputer?</h3>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="02lat">
+                <label class="form-check-label" for="02lat">0-2 lat</label><br>
+                <input type="checkbox" class="form-check-input" id="35lat">
+                <label class="form-check-label" for="35lat">3-5 lat</label><br>
+                <input type="checkbox" class="form-check-input" id="59lat">
+                <label class="form-check-label" for="59lat">5-9 lat</label><br>
+                <input type="checkbox" class="form-check-input" id="10lat">
+                <label class="form-check-label" for="10lat">10+ lat</label><br>
+              </div>
+              <button type = "button" class = "btn btn-primary" onclick = "zmierzPytanie(3)" id = "pytanie3"><i class="fas fa-check"></i> OK</button>
+        </div><br>
+        <div class = "pytanko">
+            <h3>Czy masz już jakieś doświadczenie z linuxem?</h3>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="duze">
+                <label class="form-check-label" for="duze"><i class="fab fa-linux"></i> Tak, duże</label><br>
+                <input type="checkbox" class="form-check-input" id="srednie">
+                <label class="form-check-label" for="srednie"><i class="fab fa-linux"></i> Tak, średnie</label><br>
+                <input type="checkbox" class="form-check-input" id="male">
+                <label class="form-check-label" for="male"><i class="fab fa-linux"></i> Tak, małe</label><br>
+                <input type="checkbox" class="form-check-input" id="noob">
+                <label class="form-check-label" for="noob"><i class="fab fa-linux"></i> Nie</label><br>
+              </div>
+              <button type = "button" class = "btn btn-primary" onclick="zmierzPytanie(4)" id = "pytanie4"><i class="fas fa-check"></i> OK</button>
+        </div><br>
+        <div class = "pytanko">
+            <h3>Jaki wygląd preferujesz?</h3>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="winda">
+                <label class="form-check-label" for="winda"><i class="fab fa-windows"></i> Taki jak w windowsie</label><br>
+                <input type="checkbox" class="form-check-input" id="makowiec">
+                <label class="form-check-label" for="makowiec"><i class="fab fa-apple"></i> Taki jak na macu</label><br>
+                <input type="checkbox" class="form-check-input" id="android">
+                <label class="form-check-label" for="android"><i class="fas fa-mobile"></i> Taki jak na telefonie</label><br>
+                <input type="checkbox" class="form-check-input" id="nowe">
+                <label class="form-check-label" for="nowe"><i class="fas fa-plus"></i> Chcę wpróbować coś nowego</label><br>
+                <input type="checkbox" class="form-check-input" id="idiota">
+                <label class="form-check-label" for="idiota"><i class="far fa-question-circle"></i> Obojętnie mi</label><br>
+                <input type="checkbox" class="form-check-input" id="plazma-wulkaniczna">
+                <label class="form-check-label" for="plazma-wulkaniczna"><i class="fas fa-cogs"></i> Preferuje środowisko KDE Plasma</label><br>
+                <input type="checkbox" class="form-check-input" id="gnom-ogrodowy">
+                <label class="form-check-label" for="gnom-ogrodowy"><i class="fas fa-cogs"></i> Preferuje środowisko GNOME</label><br>
+              </div>
+              <button type = "button" class = "btn btn-primary" onclick="zmierzPytanie(5)" id = "pytanie5"><i class="fas fa-check"></i> OK</button>
+        </div><br>
+        <div class = "pytanko">
+            <h3>Wolisz mieć programy preinstalowane czy sam je zainstalować?</h3>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="preinstalacja">
+                <label class="form-check-label" for="preinstalacja"><i class="fas fa-compact-disc"></i> Chcę samodzielnie zainstalować wszystkie programy</label><br>
+                <input type="checkbox" class="form-check-input" id="podstawowe-i">
+                <label class="form-check-label" for="podstawowe-i"><i class="far fa-window-restore"></i> Chcę żeby podstawowe programy takie jak pakiet biurowy lub przeglądarka WWW była zainstalowana domyślnie</label><br>
+              </div>
+              <button type = "button" class = "btn btn-primary" onclick="zmierzPytanie(6)" id = "pytanie6"><i class="fas fa-check"></i> OK</button>
+        </div><br>
+        <div class = "pytanko" id = "wyniki">
+              <button type = "button" class = "btn btn-primary" onclick="pizza()"><i class="fas fa-check"></i> Zdobądź wyniki</button>
+        </div><br>
+    </div>
+</body>
+
+</html>

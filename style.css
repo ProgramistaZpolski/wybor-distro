@@ -1,0 +1,10 @@
+.pytanko{
+    background-color: aliceblue;
+    border-radius: 10px;
+    width: 1100px;
+    padding-left: 400px;
+    transition: 1s;
+}
+.pytanko:hover{
+    background-color: azure;
+}
